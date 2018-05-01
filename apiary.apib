@@ -1,0 +1,45 @@
+FORMAT: 1A
+HOST: https://www.sysuactivity.com
+
+# SYSU-ActivityPlusPC-API
+
+SYSU-ActivityPlusPC is a web application for SYSU clubs and organizations to pulish and manage their activitys.
+
+## Activity Collection [/act]
+
+### Publish a New Activity [POST]
+
+You may publish a new activity using this action. It takes a JSON
+object containing a activity information expect 'id' in the
+form of choices.
+
++ Request (application/json)
+
+        {
+                "name": "sample",
+                "startTime": 2017-09-01,
+                "endTime": 2017-09-02,
+                "location":"三饭小广场",
+                "campus":0b0001,
+                "enrollCondition":"计算机学院全体学生",
+                "sponsor":"SDCS团委",
+                "type":2,
+                "pubStartTime": 2017-09-01,
+                "pubEndTime": 2017-09-02,
+                "detail":"飞扬C调是计算机学院的传统活动，2018年即将迎来第11个年头；往届比赛中，无数的歌声给我们带来了很多的精彩回忆！Coding&Singing，一起来吧！",
+                "verified":0b01,
+                "canEnrolled":null,
+                "email":null,
+                "enrollWay":null,
+                "enrollEndTime":null,
+                "reward":null,
+                "introduction":null,
+                "requirement":null,
+                "poster":null,
+                "club":null,
+                "qrcode":null
+        }
+
++ Response 200
+
++ Response 204
