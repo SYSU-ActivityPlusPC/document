@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: https://www.sysuactivity.com
+HOST: https://www.sysuactivity.com/api
 
 # SYSU-ActivityPlusPC-API
 
@@ -43,26 +43,30 @@ form of choices.
 
 + Response 204
 
-### List required activities [GET /act?page={pageNum}]
+### List required activities [GET /act?page={pageNum}&verify={verified}]
 List activities with the given page number.
 
 + Parameters
     + pageNum: `2` (number, optional) - Specified the page number
         + Default: `1`
-
+    
+    + verified: `1` (number, required) - Specified these activities selected are verified or not
+    
 + Response 200 (application/json)
 
         {
             "content": [
                 {
-                    "id": 28, 
-                    "name": "三月义卖", 
-                    "startTime": 1521734400000,
-                    "endTime": 1521820800000, 
-                    "campus": 0b0000, 
-                    "type": 0,
-                    "poster": "imagename",
-                    "location": "具体地点"
+                    "id": 21,
+                    "name": "sample",
+                    "startTime": 1521594000000,
+                    "endTime":1521709200000,
+                    "campus":0b0001,
+                    "enrollCondition":"计算机学院全体学生",
+                    "sponsor":"SDCS团委",
+                    "pubStartTime":1520438400000,
+                    "pubEndTime":1521475200000,
+                    "verified":0b01
                 }
             ]
         }
@@ -70,7 +74,7 @@ List activities with the given page number.
 + Response 204
 
 ### Get detailed activity information [GET /act/{id}]
-Get activity information with the given id
+Get activity information with the given id no matter this activity verified or not.
 
 + Parameters
     + id: `9421` (number, required) - Specified the activity number
