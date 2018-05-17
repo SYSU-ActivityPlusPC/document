@@ -5,6 +5,79 @@ HOST: https://www.sysuactivity.com/api
 
 SYSU-ActivityPlusPC is a web application for SYSU clubs and organizations to pulish and manage their activitys.
 
+## Session Collection [/session]
+
+### PC User Login [POST /session]
+
+You may sign in using this action.
+
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
+    + Body
+
+            {
+                "account": "用户名",
+                "password": "加密后的密码"
+            }
+
++ Response 200 (application/json)
+
+            {
+                "id": 21,
+                "name": "组织名称",
+                "logo": "组织logo文件名"
+            }
+    
++ Response 204
++ Response 400
+
+## PC User Collection [/pcusers]
+
+### PC User Sign up [POST /pcusers]
+
+You may sign up using this action.
+
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
+    + Body
+
+            {
+                "name": "组织名称",
+                "email": "联系邮箱",
+                "logo": "组织logo文件名",
+                "evidence": "身份证明文件名",
+                "info": "备注信息"
+            }
+
++ Response 200
++ Response 400
+
+## Picture Collection [/images]
+
+### Upload a picture [POST /images]
+
+You may upload a picture to server using this action.
+
++ Request (multipart/form-data)
+
+            图片的multipartfile
+        
++ Response 200 (application/json)
+
+            {
+                "filename": "上传的文件的加密后的文件名"
+            }
+
++ Response 400
+
 ## Activity Collection [/act]
 
 ### Publish a New Activity [POST /act]
