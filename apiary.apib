@@ -122,6 +122,12 @@ List activities with the given page number.
     
     + verified: `1` (number, required) - Specified these activities selected are verified or not
     
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+        
 + Response 200 (application/json)
 
         {
@@ -149,6 +155,12 @@ Get activity information with the given id no matter this activity verified or n
 + Parameters
     + id: `9421` (number, required) - Specified the activity number
     
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
 + Response 200 (application/json)
 
         {
@@ -190,6 +202,11 @@ form of choices.
     + actId: `9421` (number, required) - Specified the activity id you modified
     
 + Request (application/json)
+    + Headers
+
+            Authorization: token_string
+    
+    + Body
 
         {
                 "name": "sample",
@@ -219,7 +236,7 @@ form of choices.
 
 + Response 400
 
-### Delete Activity By Manager[DELETE /act/{actId}]
+### Delete Activity By Manager[DELETE /act/{actId}
 You may delete activity using this action.
 
 + Parameters
@@ -237,6 +254,11 @@ You may audit activity using this action.
     + actId: `9421` (number, required) - Specified the activity id you audit
     
     + verified: `1` (number, required) - Specified pass or nopass this activity
+
++ Request (application/json)
+    + Headers
+
+            Authorization: token_string
 
 + Response 200
 
