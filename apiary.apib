@@ -5,6 +5,94 @@ HOST: https://www.sysuactivity.com/api
 
 SYSU-ActivityPlusPC is a web application for SYSU clubs and organizations to pulish and manage their activitys.
 
+## Message Collection [/message]
+
+### Publish a New Message [POST /message]
+
+You may publish a new message using this action.
+
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
+    + Body
+
+        {
+                "subject": "主题",
+                "body": "正文",
+                "pcuserId": [1,2,3]
+        }
+
++ Response 200
+
++ Response 204
+
+### List required messages [GET /message?page={pageNum}]
+List messages with the given page number.
+
++ Parameters
+    + pageNum: `2` (number, optional) - Specified the page number
+        + Default: `1`
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+        
++ Response 200 (application/json)
+
+        {
+            "content": [
+                {
+                    "id": 21,
+                    "subject": "主题",
+                    "pubTime": "yyyy-mm-dd",
+                    "sendTo": ["clubname1","clubname2","clubname3"]
+                }
+            ]
+        }
+
++ Response 204
+
+### Get detailed message information [GET /message/{id}]
+Get message information with the given id.
+
++ Parameters
+    + id: `9421` (number, required) - Specified the message number
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
++ Response 200 (application/json)
+
+        {
+                "subject": "主题",
+                "body": "内容",
+                "pubTime": "yyyy-mm-dd",
+                "sendTo": ["clubname1","clubname2","clubname3"]
+        }
+    
+
++ Response 204
+
+
+### Delete Message By Manager [DELETE /message/{id}]
+You may delete message using this action.
+
++ Parameters
+    + id: `9421` (number, required) - Specified the message id you modified
+    
++ Response 200
+
++ Response 204
+
+
 ## Session Collection [/session]
 
 ### PC User Login [POST /session]
@@ -37,6 +125,123 @@ You may sign in using this action.
 + Response 400
 
 ## PC User Collection [/pcusers]
+
+### Get detailed PC User information [GET /pcusers/{id}]
+Get pc user information with the given id.
+
++ Parameters
+    + id: `9421` (number, required) - Specified the pcuser id
+
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+            
++ Response 200 (application/json)
+
+        {
+                "name": "组织名称",
+                "account": "账号",
+                "password": "密码",
+                "registerTime": "yyyy-MM-dd hh:mm",
+                "email":"联系邮箱",
+                "logo":"logo.png",
+                "evidence":"evidence.png",
+                "info":"备注信息",
+                "pubActivity": [
+                    {
+                        "id": 21,
+                        "name": "pcusername"
+                    },
+                    {
+                        "id": 21,
+                        "name": "pcusername"
+                    }
+                ]
+        }
+
++ Response 204
+
++ Response 400
+
+
+### Audit PC User By Manager [PUT /pcusers?id={pcuserId}&verify={verified}]
+
+You may audit pc user using this action.
+
++ Parameters
+    + pcuserId: `9421` (number, required) - Specified the user id you audit
+    
+    + verified: `1` (number, required) - Specified pass or nopass this user
+
++ Request (application/json)
+    + Headers
+
+            Authorization: token_string
+
++ Response 200
+
++ Response 204
+
+
+### Get detailed registration information [GET /pcusers/{id}]
+Get pc user information with the given id.
+
++ Parameters
+    + id: `9421` (number, required) - Specified the pcuser id
+
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+            
++ Response 200 (application/json)
+
+        {
+                "name": "组织名称",
+                "registerTime": "yyyy-MM-dd hh:mm",
+                "email":"联系邮箱",
+                "logo":"logo.png",
+                "evidence":"evidence.png",
+                "info":"备注信息"
+        }
+
++ Response 204
+
++ Response 400
+
+            
+### PC User List [GET /pcusers?type={type}]
+List pc users with the given type.
+
++ Parameters
+    + type: `1` (number, required) - Specified these pcusers type. 
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
++ Response 200 (application/json)
+
+        {
+            "content": [
+                {
+                    "id": 21,
+                    "name": "pcusername",
+                    "logo": "logo.png",
+                    "verified":1,
+                    "register_time":"yyyy-mm-dd"
+                }
+            ]
+        }
+        
++ Response 204
+
++ Response 400
 
 ### PC User Sign up [POST /pcusers]
 
@@ -240,7 +445,7 @@ form of choices.
 
 + Response 400
 
-### Delete Activity By Manager[DELETE /act/{actId}
+### Delete Activity By Manager[DELETE /act/{actId}]
 You may delete activity using this action.
 
 + Parameters
