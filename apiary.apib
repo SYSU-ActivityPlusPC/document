@@ -143,22 +143,11 @@ Get pc user information with the given id.
         {
                 "name": "组织名称",
                 "account": "账号",
-                "password": "密码",
                 "registerTime": "yyyy-MM-dd hh:mm",
                 "email":"联系邮箱",
                 "logo":"logo.png",
                 "evidence":"evidence.png",
-                "info":"备注信息",
-                "pubActivity": [
-                    {
-                        "id": 21,
-                        "name": "activityname"
-                    },
-                    {
-                        "id": 21,
-                        "name": "activityname"
-                    }
-                ]
+                "info":"备注信息"
         }
 
 + Response 204
@@ -180,37 +169,17 @@ You may audit pc user using this action.
 
             Authorization: token_string
 
+    + Body
+
+    
+            {
+                "refuseInfo": "拒绝信息"
+            }
+            
+
 + Response 200
 
 + Response 204
-
-
-### Get detailed pcuser information [GET /pcusers/{id}]
-Get pc user information with the given id.
-
-+ Parameters
-    + id: `9421` (number, required) - Specified the pcuser id
-
-+ Request (application/json)
-    
-    + Headers
-
-            Authorization: token_string
-            
-+ Response 200 (application/json)
-
-        {
-                "name": "组织名称",
-                "registerTime": "yyyy-MM-dd hh:mm",
-                "email":"联系邮箱",
-                "logo":"logo.png",
-                "evidence":"evidence.png",
-                "info":"备注信息"
-        }
-
-+ Response 204
-
-+ Response 400
 
             
 ### PC User List [GET /pcusers?type={type}]
