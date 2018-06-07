@@ -5,6 +5,56 @@ HOST: https://www.sysuactivity.com/api
 
 SYSU-ActivityPlusPC is a web application for SYSU clubs and organizations to pulish and manage their activitys.
 
+## ActApply Collection [/actApply]
+
+### List required actApply [GET /actApply?act={actId}]
+List activity applys with the given actId.
+
++ Parameters
+    + actId: `2` (number) - Specified the actId
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+        
++ Response 200 (application/json)
+
+        {
+            "tableTitle": ["名字", "学号", "联系方式", "学院"],
+            "content": [
+                {
+                    "id": "actapplyid",
+                    "username": "报名时填写的名字",
+                    "studentid": "报名时填写的学号",
+                    "phone": "报名时填写的联系方式",
+                    "school": "报名时填写的学院"
+                }
+            ]
+        }
+
++ Response 204
+
+### Delete ActApply By Club [DELETE /actApply?act={actId}&actApply={applyId}]
+Club may delete actapply using this action.
+
++ Parameters
+    + applyId: `9421` (number, required) - Specified the actapply id you modified
+    
+    + actId: `2` (number) - Specified the actId
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+
++ Response 200
+
++ Response 204
+
+
 ## Message Collection [/message]
 
 ### Publish a New Message [POST /message]
@@ -298,8 +348,67 @@ form of choices.
 
 + Response 204
 
-### List required activities [GET /act?page={pageNum}&verify={verified}]
-List activities with the given page number.
+
+### Get The number of Activity Status By Club [GET /act/status?club={clubId}]
+Return the number of Activity Status (published by this club).
+
++ Parameters
+    
+    + clubId: `1` (number, required) - Specified the club id
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+        
++ Response 200 (application/json)
+
+        {
+                "auditNum": 1,
+                "ongoingNum": 2,
+                "overNum": 3
+        }
+
++ Response 204
+
+
+### List required activities By Club [GET /act/club?page={pageNum}&club={clubId}]
+Only club can use this API, return activity list published by this club.
+
++ Parameters
+    + pageNum: `2` (number, optional) - Specified the page number
+        + Default: `1`
+    
+    + clubId: `1` (number, required) - Specified the club id
+    
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: token_string
+        
++ Response 200 (application/json)
+
+        {
+            "content": [
+                {
+                    "id": 21,
+                    "name": "sample",
+                    "pubStartTime": "yyyy-mm-dd",
+                    "pageViews": 99,
+                    "registerNum": 99,
+                    "type": 0,
+                    "canEnrolled": 0
+                }
+            ]
+        }
+
++ Response 204
+
+
+### List required activities By Manager [GET /act?page={pageNum}&verify={verified}]
+Only manager can use this API. List activities with the given page number.
 
 + Parameters
     + pageNum: `2` (number, optional) - Specified the page number
@@ -377,7 +486,7 @@ Get activity information with the given id no matter this activity verified or n
 
 + Response 204
 
-### Modify Activity Info By Manager[POST /act/{actId}]
+### Modify Activity Info By Manager or Club[POST /act/{actId}]
 
 You may modify activity using this action. It takes a JSON
 object containing a activity information expect 'id' in the
@@ -438,6 +547,22 @@ You may audit activity using this action.
     + actId: `9421` (number, required) - Specified the activity id you audit
     
     + verified: `1` (number, required) - Specified pass or nopass this activity
+
++ Request (application/json)
+    + Headers
+
+            Authorization: token_string
+
++ Response 200
+
++ Response 204
+
+### Close Activity Apply By Club[PUT /act/{actId}]
+
+Club can close activity apply using this action.
+
++ Parameters
+    + actId: `9421` (number, required) - Specified the activity id which need close apply
 
 + Request (application/json)
     + Headers
