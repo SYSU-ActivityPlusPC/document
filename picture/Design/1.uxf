@@ -4,57 +4,49 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>50</x>
-      <y>220</y>
+      <x>80</x>
+      <y>270</y>
       <w>110</w>
-      <h>50</h>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;database&gt;&gt;
-MySQL</panel_attributes>
+    <panel_attributes>&lt;&lt;server&gt;&gt;
+DBMS
+{MySQL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>230</x>
-      <y>200</y>
-      <w>120</w>
-      <h>70</h>
+      <x>260</x>
+      <y>220</y>
+      <w>170</w>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;server-end&gt;&gt;
-RESTful API
-{Env=Golang}
+    <panel_attributes>&lt;&lt;server&gt;&gt;
+Web Server
+{OS=linus,
+Env=Golang}
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>440</x>
-      <y>220</y>
-      <w>110</w>
-      <h>50</h>
+      <x>790</x>
+      <y>260</y>
+      <w>130</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;front-end&gt;&gt;
-View</panel_attributes>
+    <panel_attributes>&lt;&lt;PC client&gt;&gt;
+Browser
+{html5, css3}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>120</y>
-      <w>30</w>
-      <h>240</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>150</x>
-      <y>240</y>
+      <x>180</x>
+      <y>290</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -64,12 +56,63 @@ View</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>240</y>
-      <w>120</w>
+      <x>420</x>
+      <y>290</y>
+      <w>100</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>500</x>
+      <y>220</y>
+      <w>160</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;server&gt;&gt;
+Proxy
+{OS=linus}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>280</x>
+      <y>310</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;artifact&gt;&gt;
+myApplication</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>520</x>
+      <y>300</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;HTTP proxy&gt;&gt;
+ngnix</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>280</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+HTTP/
+RESTful Service</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
 </diagram>

@@ -4,8 +4,8 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>270</x>
-      <y>80</y>
+      <x>470</x>
+      <y>100</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -16,9 +16,9 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>90</x>
-      <y>240</y>
-      <w>560</w>
+      <x>210</x>
+      <y>250</y>
+      <w>730</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>业务层</panel_attributes>
@@ -27,7 +27,7 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>90</x>
+      <x>280</x>
       <y>50</y>
       <w>560</w>
       <h>150</h>
@@ -38,10 +38,10 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>90</x>
-      <y>450</y>
-      <w>570</w>
-      <h>150</h>
+      <x>370</x>
+      <y>440</y>
+      <w>380</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>持久化层</panel_attributes>
     <additional_attributes/>
@@ -49,8 +49,8 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>100</x>
-      <y>80</y>
+      <x>300</x>
+      <y>100</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -61,8 +61,8 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>440</x>
-      <y>80</y>
+      <x>640</x>
+      <y>100</y>
       <w>190</w>
       <h>70</h>
     </coordinates>
@@ -73,8 +73,8 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>110</x>
-      <y>290</y>
+      <x>230</x>
+      <y>300</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -85,8 +85,8 @@ PC用户管理模块</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>280</x>
-      <y>290</y>
+      <x>410</x>
+      <y>300</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -97,20 +97,20 @@ PC用户管理模块</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>460</x>
-      <y>290</y>
+      <x>590</x>
+      <y>300</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>--
-消息管理模块</panel_attributes>
+session管理模块</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>120</x>
-      <y>500</y>
+      <x>390</x>
+      <y>480</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -121,8 +121,8 @@ PC端用户</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>300</x>
-      <y>500</y>
+      <x>580</x>
+      <y>480</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -131,125 +131,158 @@ PC端用户</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLPackage</id>
-    <coordinates>
-      <x>480</x>
-      <y>500</y>
-      <w>150</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>--
-消息</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>140</y>
-      <w>210</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;190.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>180</x>
-      <y>140</y>
-      <w>200</w>
+      <x>370</x>
+      <y>160</y>
+      <w>140</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>180.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;120.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>140</y>
-      <w>30</w>
-      <h>180</h>
+      <x>300</x>
+      <y>160</y>
+      <w>280</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>260.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>140</y>
-      <w>30</w>
-      <h>180</h>
+      <x>480</x>
+      <y>160</y>
+      <w>100</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>140</y>
+      <x>670</x>
+      <y>160</y>
+      <w>100</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>160</y>
+      <w>290</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>360</y>
+      <w>180</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>360</y>
+      <w>180</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>360</y>
       <w>220</w>
-      <h>180</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>200</x>
-      <y>350</y>
-      <w>30</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>350</y>
-      <w>30</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>200.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>550</x>
-      <y>350</y>
-      <w>30</w>
-      <h>180</h>
+      <y>160</y>
+      <w>150</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>140</y>
-      <w>220</w>
-      <h>170</h>
+      <x>300</x>
+      <y>160</y>
+      <w>470</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;200.0;150.0</additional_attributes>
+    <additional_attributes>450.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>770</x>
+      <y>300</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>--
+图片管理模块</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>140</y>
-      <w>390</w>
+      <x>370</x>
+      <y>160</y>
+      <w>490</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>370.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;470.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>160</y>
+      <w>310</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>160</y>
+      <w>120</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;150.0</additional_attributes>
   </element>
 </diagram>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLHierarchy</id>
+    <coordinates>
+      <x>220</x>
+      <y>50</y>
+      <w>350</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>type=Package
+sysu-activitypluspc
+	service-end
+		controller
+		middleware
+		model
+		router
+		services
+		types</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>50</x>
+      <y>200</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>持久化层</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>50</x>
+      <y>90</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>业务层</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>100</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>190</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;60.0;180.0;10.0</additional_attributes>
+  </element>
+</diagram>
